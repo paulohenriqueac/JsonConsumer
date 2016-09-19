@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Json Consumer</string>
+
+    <string name="id">ID:</string>
+    <string name="name">Name:</string>
+    <string name="pwd">Pwd:</string>
+</resources>
