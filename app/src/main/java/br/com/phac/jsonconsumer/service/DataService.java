@@ -21,7 +21,7 @@ import br.com.phac.jsonconsumer.domain.Data;
 public class DataService {
     public static List<Data> getCarros(Context context) throws IOException, JSONException {
 
-        List<Data> datas = new ArrayList<Data>();
+        List<Data> dataList = new ArrayList<Data>();
 
         JSONArray jsonArray = getJSONObject(context).getJSONArray("data");
 
@@ -34,10 +34,10 @@ public class DataService {
             d.setName(jo.getString("name"));
             d.setPwd(jo.getString("pwd"));
 
-            datas.add(d);
+            dataList.add(d);
         }
 
-        return datas;
+        return dataList;
     }
     private static JSONObject getJSONObject(Context context)  throws IOException, JSONException {
         Resources resources = context.getResources();
@@ -46,16 +46,20 @@ public class DataService {
         BufferedReader reader = new BufferedReader(new InputStreamReader(is,  "utf-8"));
         StringBuilder sb = new StringBuilder();
         String line = null;
+
         while ((line = reader.readLine()) != null) {
             sb.append(line + "\n");
         }
+
         String result = sb.toString();
         JSONObject jsonObject = null;
+
         try {
             jsonObject = new JSONObject(result);
         } catch (JSONException e) {
             Log.e("log_tag", "Error parsing data " + e.toString());
         }
+
         return jsonObject;
     }
 }

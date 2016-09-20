@@ -51,17 +51,17 @@ public class ListFragment extends Fragment {
     public void onActivityCreated(Bundle bundle){
         super.onActivityCreated(bundle);
 
-        List<Data> datalist = null;
+        List<Data> dataList = null;
 
         try {
-            datalist = DataService.getCarros(getContext());
+            dataList = DataService.getCarros(getContext());
         } catch (IOException e) {
             e.printStackTrace();
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
-        recyclerView.setAdapter(new DataAdapter(getContext(), datalist));
+        recyclerView.setAdapter(new DataAdapter(getContext(), dataList));
 
     }
 }

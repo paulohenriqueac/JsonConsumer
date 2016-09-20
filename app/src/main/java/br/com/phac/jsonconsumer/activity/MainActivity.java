@@ -11,8 +11,6 @@ import br.com.phac.jsonconsumer.fragment.ListFragment;
 
 public class MainActivity extends AppCompatActivity {
 
-    protected List<Data> dataList;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +25,5 @@ public class MainActivity extends AppCompatActivity {
                 .beginTransaction()
                 .add(R.id.contentPanel, frag, "LIST_FRAGMENT")
                 .commit();
-
     }
 }
