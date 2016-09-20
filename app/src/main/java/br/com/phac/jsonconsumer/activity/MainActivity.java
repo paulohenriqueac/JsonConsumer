@@ -2,18 +2,12 @@ package br.com.phac.jsonconsumer.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 
 import java.util.List;
 
 import br.com.phac.jsonconsumer.R;
 import br.com.phac.jsonconsumer.domain.Data;
 import br.com.phac.jsonconsumer.fragment.ListFragment;
-import retrofit.Call;
-import retrofit.Callback;
-import retrofit.GsonConverterFactory;
-import retrofit.Response;
-import retrofit.Retrofit;
 
 public class MainActivity extends AppCompatActivity {
 

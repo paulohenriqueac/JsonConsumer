@@ -1,13 +1,17 @@
 package br.com.phac.jsonconsumer.domain;
 
-
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-
-public class Data {
+public class Data{
     private String id;
     private String name;
     private String pwd;
+
+    public Data() {    }
+
+    public Data(String id, String name, String pwd) {
+        this.id = id;
+        this.name = name;
+        this.pwd = pwd;
+    }
 
     public String getId() {
         return id;
